@@ -81,7 +81,7 @@ body {
 
 	<div>
 		<div id="dogImgDiv">
-			<img id="dogImg" src="/resources/img/etcImg/dogcolor.jpg">
+			<img id="dogImg" src="/resources/image/etcImage/dogcolor.jpg">
 		</div>
 		
 		<p id="main-text">유기견과 유기묘들의 이야기</p>
