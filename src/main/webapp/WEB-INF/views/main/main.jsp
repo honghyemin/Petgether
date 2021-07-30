@@ -1,16 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="cp" value ="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-<!-- Import BootStrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!-- Vendor CSS Files -->
+<link href="${cp}/resources/css/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="${cp}/resources/css/vendor/bootstrap-icons/bootstrap-icons.css"
+	rel="stylesheet">
+	
 <script>
 $(function(){
+	$(".bi-door-cl")
 
 });
 
@@ -67,8 +75,30 @@ body {
 	font-size:30px;
 	color:#4d4d4d;
 	text-align:center;
-	font-weight:bold;
 	letter-spacing: 5px;
+}
+#entrance{
+	width:10%;
+	font-size:18px;
+	text-align:center;
+	margin: 0 auto;
+	color:gray;
+}
+#entrance i:last-child {
+	display:none;
+}
+#entrance:hover{
+	cursor: pointer;
+	color:#ff8080;
+}
+#entrance:hover i:first-child{
+	display:none;
+}
+#entrance:hover i:last-child {
+	display:block;
+}
+.entTxt {
+	font-style:normal;
 }
 </style>
 </head>
@@ -83,10 +113,14 @@ body {
 		<div id="dogImgDiv">
 			<img id="dogImg" src="/resources/image/etcImage/dogcolor.jpg">
 		</div>
-		
+		<br>
 		<p id="main-text">유기견과 유기묘들의 이야기</p>
 		<div>
-			<p><i class="bi bi-door-closed-fill"></i>입장하기</p>
+			<p id="entrance">
+				<i class="bi bi-door-closed"><span class="entTxt">&nbsp;입장하기</span></i>
+				<i class="bi bi-door-open"><span class="entTxt">&nbsp;입장하기</span></i>
+				
+			</p>
 		</div>
 	</div>
 
