@@ -18,7 +18,9 @@
 	
 <script>
 $(function(){
-	$(".bi-door-cl")
+	$("#entrance").click(function(){
+		location.href="siteMain.do";
+	});
 
 });
 
@@ -103,7 +105,6 @@ body {
 </style>
 </head>
 <body>
-<!-- <img id="footImg" src="/resources/img/etcImg/foot.png"> -->
 <div class="main">
 	<div id="petgether">
 		<p>PETGETHER</p>
